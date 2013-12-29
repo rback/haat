@@ -2,8 +2,8 @@
   "name": "haat",
   "version": "1.0.0",
   "dependencies": {
-    "jquery": "2.0.3",
-    "less.js": "1.5.1",
-    "modernizr": " 2.7.1"
+    "jquery": "2.0.x",
+    "less.js": "1.5.x",
+    "modernizr": " 2.7.x"
   }
 }
