@@ -14,15 +14,20 @@
 	<link rel="stylesheet" href="less/reset.css" />
 	<link rel="stylesheet" href="less/styles.css" />
 	<link rel="stylesheet/less" type="text/css" href="less/styles.less">
-	<script src="js/modernizr/modernizr.js"></script>
-	<script src="js/jquery/jquery.js"></script>
-	<script src="js/less.js/dist/less-1.5.0.js" type="text/javascript"></script>
+	<script src="js/modernizr/modernizr.js" type="text/javascript"></script>
+	<script src="js/jquery/jquery.js" type="text/javascript"></script>
+	<script src="js/less.js/dist/less-1.5.1.js" type="text/javascript"></script>
 </head>
 <body>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false" type="text/javascript"></script>
+	<script src="js/maps.js" type="text/javascript"></script>
+
 	<header>
 		<nav>
-			<a href="#">Ilmoittaudu</a>
-			<a href="#">Lahjalista</a>
+			<a href="#">Kirkko &amp; hääjuhla</a>
+			<a href="#">Ilmoittautuminen</a>
+			<a href="#">Lahjat ja muistamiset</a>
+			<a href="#">Ohjelmanumerot</a>
 			<a href="#">Yöpyminen</a>
 		</nav>
 	</header>
@@ -30,94 +35,129 @@
 		Tervetuloa Heidin &amp; Rasmuksen hääsivulle!
 	</h1>
 	<article class="main">
-		<img src="img/temp.jpg">
-		<p>
-			Sanomme toisillemme tahdon lauantaina 17.5.2014 Helsingissä – toivottavasti pääset osallistumaan suureen päiväämme!
-		</p>
-		<p>
-			Muistathan ilmoittautua (linkki) 22.4.2014 (TBD) mennessä. Otathan yhteyttä (linkki) mikäli sinulla on kysyttävää (linkki) juhlaamme liittyen tai haluat esimerkiksi esittää ohjelmanumeron (linkki).
-		</p>
-		<p>
-			Vihkiminen tapahtuu Johanneksen kirkossa, Helsingissä klo 16.00.
-		</p>
-		<p>
-			Pukukoodi: tumma puku</p>
-		</p>
-		<h2>
-			Osoitteet
-		</h2>
-		<pre>
-			Johanneksen kirkko
-			Korkeavuorenkatu 12, 00120 Helsinki
-		</pre>
-		<pre>
-			G18 juhlasali
-			Yrjönkatu 18, 00120 Helsinki
-		</pre>
-		<p>
-			Helsingin keskustasta Johanneksen kirkolle kulkee raitiovaunu numero 10 ja bussi numero 24. Pysäkki “Johanneksen kirkko”. Parkkipaikan löytäminen kirkon tai juhlatilan lähistöltä voi olla haastavaa, joten huomioithan tämän, mikäli saavut juhlaamme autolla! 
-		</p>
-		<p>
-			Kirkolta juhlapaikalle on n. 450 metrin matka, joka kävellään.
-		</p>
-		<p>
-			Mikäli sinulla on liikuntarajoite ja tarvitset autokuljetuksen kirkolta juhlapaikalle, mainitsethan tästä ilmoittautumisen yhteydessä.
-		</p>
-		<p>
-			Google kartta linkki
-		</p>
-		<h2>
-			RSVP/Ilmoittautuminen
-		</h2>
-		<p>
-			Ilmoitathan tulostasi tai mahdollisesta esteestä 22.4.2014 (TBD) mennessä. Mainitsethan samalla mahdollisista erikoisruokavaliosta tai allergioista! Kerrothan ilmoittautumisen yhteydessä myös, mikäli sinulla on liikuntarajoite ja tarvitset autokuljetuksen kirkolta juhlapaikalle.
-		</p>
-		<p>
-			Otattehan myös huomioon ystävällisen toiveemme juhlia häitämme aikuisten kesken.
-		</p>
-		<pre>
-			Heidi: 044-299 3211 rissanen.heidi@gmail.com
-			Rasmus: 050-564 1171 rasmus.back@gmail.com
-		</pre>
-		<p>
-			Jokainen henkilö erikseen, etunimi, sukunimi. mahdolliset ruokavaliot/allergiat. Lisäksi jos tarvitsee autokyydin
-		</p>
-		<h2>
-			Lahjat ja Muistamiset
-		</h2>
-		<p>
-			Häihin osallistumisen ehto ei ole lahjojen tuonti - tärkeintä on, että tuotte itsenne paikalle juhlimaan kanssamme tärkeää päiväämme.
-		</p>
-		<p>
-			Lahjalista
-		</p>
-		<h2>
-			Ohjelmanumerot
-		</h2>
-		<p>
-			Jos haluat pitää häissämme puheen tai olet suunnitellut jonkin muun ohjelmanumeron, niin ilmoitathan siitä etukäteen Toast Madamelle!
-		</p>
-		<h2>
-			Yöpyminen
-		</h2>
-		<p>
-			Juhlapaikkamme sijaitsee Helsingin keskustassa, joten lähistöllä on useita hotelleja. Emme ole varanneet huoneita etukäteen mistään tietystä hotellista, joten varaathan huoneen mieluisestasi hotellista
-		</p>
-		<p>
-			Voimme suositella esimerkiksi seuraavia hotelleja:
-			<pre>
-				Hotel Glo Art
-				Lönnrotinkatu 29,
-				00180 Helsinki
-				+358 10 3444 100
+		<img class="banner-image" src="img/temp.jpg">
+		<section>
+			<h2 class="inline">
+				Kirkko &amp; hääjuhla
+			</h2>
+			<div class="inline">
+				<h3>
+					Kirkko
+				</h3>
+				<div class="inline text-box">
+					<p>
+						Sanomme toisillemme tahdon lauantaina 17.5.2014 Helsingissä – toivottavasti pääset osallistumaan suureen päiväämme!
+					</p>
+					<p>
+						Muistathan ilmoittautua (linkki) 22.4.2014 (TBD) mennessä. Otathan yhteyttä (linkki) mikäli sinulla on kysyttävää (linkki) juhlaamme liittyen tai haluat esimerkiksi esittää ohjelmanumeron (linkki).
+					</p>
+					<p>
+						Vihkiminen tapahtuu Johanneksen kirkossa, Helsingissä klo 16.00.
+					</p>
+					<p>
+						Pukukoodi: tumma puku</p>
+					</p>
+					<pre>
+						Johanneksen kirkko
+						Korkeavuorenkatu 12, 00120 Helsinki
+					</pre>
+				</div>
+				<div class="google-maps inline" id="map-johanneksenkirkko"></div>
 
-				Radisson Blu Seaside Hotel
-				Ruoholahdenranta 3
-				00180 Helsinki
-				+358 20 1234 707
-			</pre>
-			Molemmissa yllämainituissa hotelleissa on pysäköintihalli.
-		</p>
+				<h3 class="break">
+					Hääjuhla
+				</h3>
+				<div class="inline text-box">
+					<pre>
+						G18 juhlasali
+						Yrjönkatu 18, 00120 Helsinki
+					</pre>
+					<p>
+						Helsingin keskustasta Johanneksen kirkolle kulkee raitiovaunu numero 10 ja bussi numero 24. Pysäkki “Johanneksen kirkko”. Parkkipaikan löytäminen kirkon tai juhlatilan lähistöltä voi olla haastavaa, joten huomioithan tämän, mikäli saavut juhlaamme autolla! 
+					</p>
+					<p>
+						Kirkolta juhlapaikalle on n. 450 metrin matka, joka kävellään.
+					</p>
+					<p>
+						Mikäli sinulla on liikuntarajoite ja tarvitset autokuljetuksen kirkolta juhlapaikalle, mainitsethan tästä ilmoittautumisen yhteydessä.
+					</p>
+				</div>
+				<div class="google-maps inline" id="map-g18"></div>
+			</div>
+		</section>
+		
+		<section>
+			<h2 class="inline">
+				Ilmoittautuminen
+			</h2>
+			<div class="inline text-box">
+				<p>
+					Ilmoitathan tulostasi tai mahdollisesta esteestä 22.4.2014 (TBD) mennessä. Mainitsethan samalla mahdollisista erikoisruokavaliosta tai allergioista! Kerrothan ilmoittautumisen yhteydessä myös, mikäli sinulla on liikuntarajoite ja tarvitset autokuljetuksen kirkolta juhlapaikalle.
+				</p>
+				<p>
+					Otattehan myös huomioon ystävällisen toiveemme juhlia häitämme aikuisten kesken.
+				</p>
+				<pre>
+					Heidi: 044-299 3211 rissanen.heidi@gmail.com
+					Rasmus: 050-564 1171 rasmus.back@gmail.com
+				</pre>
+				<p>
+					Jokainen henkilö erikseen, etunimi, sukunimi. mahdolliset ruokavaliot/allergiat. Lisäksi jos tarvitsee autokyydin
+				</p>
+			</div>
+			<div class="rsvp info-box inline">
+			</div>
+		</section>
+		<section>
+			<h2 class="inline">
+				Lahjat ja muistamiset
+			</h2>
+			<div class="inline text-box">
+				<p>
+					Häihin osallistumisen ehto ei ole lahjojen tuonti - tärkeintä on, että tuotte itsenne paikalle juhlimaan kanssamme tärkeää päiväämme.
+				</p>
+			</div>
+			<div class="inline info-box wish-list">
+			</div>
+		</section>
+		<section>
+			<h2 class="inline">
+				Ohjelmanumerot
+			</h2>
+			<div class="inline text-box">
+				<p>
+					Jos haluat pitää häissämme puheen tai olet suunnitellut jonkin muun ohjelmanumeron, niin ilmoitathan siitä etukäteen 	Toast Madamelle!
+				</p>
+			</div>
+			<div class="inline info-box toast-contact">
+			</div>
+		</section>
+		<section>
+			<h2 class="inline">
+				Yöpyminen
+			</h2>
+			<div class="inline text-box">
+				<p>
+					Juhlapaikkamme sijaitsee Helsingin keskustassa, joten lähistöllä on useita hotelleja. Emme ole varanneet huoneita etukäteen mistään tietystä hotellista, joten varaathan huoneen mieluisestasi hotellista
+				</p>
+				<p>
+					Voimme suositella esimerkiksi seuraavia hotelleja:
+					<pre>
+						Hotel Glo Art
+						Lönnrotinkatu 29,
+						00180 Helsinki
+						+358 10 3444 100
+
+						Radisson Blu Seaside Hotel
+						Ruoholahdenranta 3
+						00180 Helsinki
+						+358 20 1234 707
+					</pre>
+					Molemmissa yllämainituissa hotelleissa on pysäköintihalli.
+				</p>
+			</div>
+			<div class="google-maps info-box inline" id="map-hotels"></div>
+		</section>
 	</article>
 <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
 		 http://chromium.org/developers/how-tos/chrome-frame-getting-started -->
