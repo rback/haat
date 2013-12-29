@@ -1,0 +1,13 @@
+{
+  "name": "hr-haat",
+  "description": "Wedding Site",
+  "version": "0.0.1",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "main": "app.js",
+  "dependencies" : {
+    "express" : "3.4.x",
+    "logfmt": "0.18.x"
+  }
+}
