@@ -16,6 +16,8 @@
 	<link rel="stylesheet/less" type="text/css" href="less/styles.less">
 	<script src="js/modernizr/modernizr.js" type="text/javascript"></script>
 	<script src="js/jquery/jquery.js" type="text/javascript"></script>
+	<script src="js/jquery.scrollTo/jquery.scrollTo.js" type="text/javascript"></script>
+	<script src="js/jquery.localScroll/jquery.localScroll.js" type="text/javascript"></script>
 	<script src="js/less.js/dist/less-1.5.1.js" type="text/javascript"></script>
 </head>
 <body>
@@ -23,12 +25,12 @@
 	<script src="js/maps.js" type="text/javascript"></script>
 
 	<header>
-		<nav>
-			<a href="#">Kirkko &amp; hääjuhla</a>
-			<a href="#">Ilmoittautuminen</a>
-			<a href="#">Lahjat ja muistamiset</a>
-			<a href="#">Ohjelmanumerot</a>
-			<a href="#">Yöpyminen</a>
+		<nav id="navigation">
+			<a href="#church">Kirkko &amp; hääjuhla</a>
+			<a href="#rsvp">Ilmoittautuminen</a>
+			<a href="#wishlist">Lahjat ja muistamiset</a>
+			<a href="#program">Ohjelmanumerot</a>
+			<a href="#hotels">Yöpyminen</a>
 		</nav>
 	</header>
 	<h1 class="welcome">
@@ -37,7 +39,7 @@
 	<article class="main">
 		<img class="banner-image" src="img/temp.jpg">
 		<section>
-			<h2 class="inline">
+			<h2 id="church" class="inline">
 				Kirkko &amp; hääjuhla
 			</h2>
 			<div class="inline">
@@ -87,7 +89,7 @@
 		</section>
 		
 		<section>
-			<h2 class="inline">
+			<h2 id="rsvp" class="inline">
 				Ilmoittautuminen
 			</h2>
 			<div class="inline text-box">
@@ -109,7 +111,7 @@
 			</div>
 		</section>
 		<section>
-			<h2 class="inline">
+			<h2 id="wishlist" class="inline">
 				Lahjat ja muistamiset
 			</h2>
 			<div class="inline text-box">
@@ -121,7 +123,7 @@
 			</div>
 		</section>
 		<section>
-			<h2 class="inline">
+			<h2 id="program" class="inline">
 				Ohjelmanumerot
 			</h2>
 			<div class="inline text-box">
@@ -133,7 +135,7 @@
 			</div>
 		</section>
 		<section>
-			<h2 class="inline">
+			<h2 id="hotels" class="inline">
 				Yöpyminen
 			</h2>
 			<div class="inline text-box">
