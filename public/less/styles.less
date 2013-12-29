@@ -30,11 +30,19 @@ body {
 			text-align: center;
 			* {text-align: left}
 			> h2 {
-				width: 200px;
+				font-size: 32px;
+				.sans-serif-font;
+				width: 280px;
+			}
+			h3 {
+				.sans-serif-font;
+				font-size: 24px;
 			}
 			p {
 				padding-bottom: 5px;
 				text-align: left;
+				.serif-font;
+				font-size: 18px;
 			}
 		}
 	}
@@ -61,3 +69,39 @@ body {
 	width: 400px;
 	height: 400px;
 }
+
+@font-face {
+    font-family: 'st_marie_thinthin';
+    src: url('../fonts/StMarie-Thin-webfont.eot');
+    src: url('../fonts/StMarie-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/StMarie-Thin-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.serif-font() {
+    font-family: st_marie_thinthin, "Times New Roman", Times, serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'existencelight';
+    src: url('../fonts/Existence-Light-webfont.eot');
+    src: url('../fonts/Existence-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Existence-Light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.sans-serif-font() {
+    font-family: existencelight, Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+.body-text-font {
+	font-family:  Arial, sans-serif;
+	font-size: 18px;
+    font-weight: normal;
+    font-style: normal;	
+}
+
+
