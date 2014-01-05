@@ -1,3 +1,6 @@
+@import "/js/components/font-awesome/less/font-awesome";
+@fa-font-path: "/js/components/font-awesome/fonts";
+
 body {
 	a { text-decoration: none; }
 	font-family: "Arial", "sans-serif";
@@ -24,35 +27,39 @@ body {
 		.sans-serif-font;
 	}
 	.main {
+		padding: 0 10px 0 10px;
 		.banner-image {
 			margin: auto;
 			display: block;
 		}
-		section {
-			margin-top: 20px;
-			text-align: center;
-			* {text-align: left}
-			> h2 {
-				font-size: 32px;
-				.sans-serif-font;
-				width: 280px;
-			}
-			h3 {
-				.sans-serif-font;
-				font-size: 24px;
-			}
+		img {
+			display: block;
+			margin: 20px auto;
 		}
 	}
 }
 
+.section {
+	margin-top: 20px;
+	text-align: center;
+	* {text-align: left}
+	> h2 {
+		margin-right: 30px;
+		text-align: right;
+		font-size: 32px;
+		.sans-serif-font;
+		width: 300px;
+	}
+	h3 {
+		.sans-serif-font;
+		font-size: 24px;
+	}
+}
+
 .contact-box {
-  //background-color: rgba(168, 255, 197, 1.0);
-  background-color: lightblue;
+  .serif-font;
   display: inline-block;
   padding: 10px;
-  color: rgba(84, 87, 92, 1.0);
-  border: 1px solid;
-  border-radius: 4px;
   margin: 10px;
   p {
     padding: 0;
@@ -61,7 +68,7 @@ body {
 
 .text-box {
   p {
-    width: 600px;
+    max-width: 600px;
     padding-bottom: 5px;
     text-align: left;
     .serif-font;
@@ -79,6 +86,10 @@ body {
 	display: inline-block;
 }
 
+.center-align {
+	text-align: center;
+	* {text-align: left}
+}
 .break {
 	display: block;
 }
@@ -87,6 +98,16 @@ body {
     display: none;
 	width: 400px;
 	height: 400px;
+}
+
+.map-link {
+	display: block;
+	margin-top: 3px;
+	.fa {
+		margin-right: 5px;
+		color: black;
+		vertical-align: middle;	
+	}
 }
 
 @font-face {
@@ -99,7 +120,7 @@ body {
 }
 .serif-font() {
     font-family: st_marie_thinthin, "Times New Roman", Times, serif;
-    font-weight: normal;
+    font-weight: bolder;
     font-style: normal;
 }
 
@@ -116,7 +137,6 @@ body {
     font-weight: normal;
     font-style: normal;
 }
-
 
 @font-face {
     font-family: 'league_gothicregular';
