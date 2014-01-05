@@ -5,6 +5,7 @@
     "jquery": "2.0.x",
     "less.js": "1.5.x",
     "modernizr": " 2.7.x",
-    "jquery.localScroll": "1.3.x"
+    "jquery.localScroll": "1.3.x",
+    "font-awesome": "4.0.x"
   }
 }
