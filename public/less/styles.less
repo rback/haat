@@ -41,21 +41,36 @@ body {
 				.sans-serif-font;
 				font-size: 24px;
 			}
-			p {
-				padding-bottom: 5px;
-				text-align: left;
-				.serif-font;
-				font-size: 18px;
-			}
 		}
 	}
 }
 
+.contact-box {
+  //background-color: rgba(168, 255, 197, 1.0);
+  background-color: lightblue;
+  display: inline-block;
+  padding: 10px;
+  color: rgba(84, 87, 92, 1.0);
+  border: 1px solid;
+  border-radius: 4px;
+  margin: 10px;
+  p {
+    padding: 0;
+  }
+}
+
 .text-box {
-	width: 600px;
+  p {
+    width: 600px;
+    padding-bottom: 5px;
+    text-align: left;
+    .serif-font;
+    font-size: 18px;
+  }
 }
 
 .info-box {
+    display: none;
 	width: 400px;
 }
 
@@ -69,6 +84,7 @@ body {
 }
 
 .google-maps {
+    display: none;
 	width: 400px;
 	height: 400px;
 }
