@@ -35,6 +35,11 @@ app.get('/', function (req, res) {
     });
 });
 
+app.get('/:locale', function (req, res) {
+  res.cookie('locale', req.params.locale);
+  res.redirect("/");
+});
+
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
   console.log("Listening on " + port);
