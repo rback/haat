@@ -6,10 +6,12 @@
     "node": "0.10.x"
   },
   "main": "app.js",
-  "dependencies" : {
-    "express" : "3.4.x",
+  "dependencies": {
+    "express": "3.4.x",
     "logfmt": "0.18.x",
-    "bower": "1.2.x"
+    "bower": "1.2.x",
+    "express3-handlebars": "0.5.x",
+    "i18n": "~0.4.1"
   },
   "scripts": {
     "postinstall": "./node_modules/bower/bin/bower install"
