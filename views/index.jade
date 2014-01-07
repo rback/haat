@@ -1,0 +1,39 @@
+extend layout
+
+mixin contact-box(map_target)
+  div.contact-box
+    block
+    a.map-link(href="#{map_target}")
+      span.fa.fa-external-link
+      | Näytä kartalla
+
+mixin section(name)
+  section.section
+    h2(id= name).inline= t(name + ".header")
+    div.inline
+      div.inline.text-box
+        block
+    <img class="divider" src="/img/arrow-divider.png">
+
+block church
+  +section("church")
+    p= t("church.ceremony")
+    //<p>Sanomme toisillemme tahdon lauantaina 17.5.2014 Helsingissä – toivottavasti pääset osallistumaan suureen päiväämme!</p>
+      <p>Muistathan ilmoittautua (linkki) 22.4.2014 (TBD) mennessä. Otathan yhteyttä (linkki) mikäli sinulla on kysyttävää
+      (linkki) juhlaamme liittyen tai haluat esimerkiksi esittää ohjelmanumeron (linkki).</p>
+    p Pukukoodi: tumma puku
+    div
+    div.center-align
+      +contact-box('')
+        p= t("church.address_1")
+        p= t("church.address_2")
+        p= t("church.address_3")
+      +contact-box('')
+        p= t("party.address_1")
+        p= t("party.address_2")
+        p= t("party.address_3")
+    div#map-johanneksenkirkko.google-maps.inline
+    div#map-g18.google-maps.inline
+    div.text-box
+        p= t("party.directions_1")
+        p= t("party.directions_2")

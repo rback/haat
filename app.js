@@ -1,31 +1,31 @@
 var express = require('express');
-var exphbs  = require('express3-handlebars');
-var i18n = require('i18n');
+var jade = require('jade');
+var i18n = require("i18next");
 var logfmt = require("logfmt");
 var app = express();
 
-
 app.configure(function () {
-	app.engine('.hbs', exphbs({
-		defaultLayout: 'default',
-		extname: '.hbs'
-	}));
-	app.set('views', "" + __dirname + "/views");
-	app.set('view engine', '.hbs');
+	app.set('views', __dirname + "/views");
+	app.set('view engine', 'jade');
 
-	i18n.configure({
-		locales: ['en', 'fi', 'se'],
-		cookie: 'locale',
-		updateFiles: false,
-		defaultLocale: 'fi',
-		directory: "" + __dirname + "/locales"
+	i18n.init({
+		lng: "fi",
+		useCookie: true,
+		detectLngFromHeaders: false,
+		supportedLngs: ['fi', 'se', 'en'],
+		cookieName: 'locale',
+		fallbackLng: 'fi',
+		resGetPath: __dirname + '/locales/__lng__.json',
+		debug: true
 	});
 
 	app.use(express.cookieParser());
-	app.use(i18n.init);
+	app.use(i18n.handle);
 	app.use(logfmt.requestLogger());
 	app.use(express.static(__dirname + '/public'));
 });
+i18n.registerAppHelper(app)
+
 
 app.get('/', function (req, res) {
     res.render('main', {
@@ -33,6 +33,10 @@ app.get('/', function (req, res) {
             __: function (key) { return res.__(key); }
         }
     });
+});
+
+app.get('/lol', function (req, res) {
+	res.render('index',	{ pretty: true })
 });
 
 app.get('/:locale', function (req, res) {

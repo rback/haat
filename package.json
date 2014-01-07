@@ -11,7 +11,9 @@
     "logfmt": "0.18.x",
     "bower": "1.2.x",
     "express3-handlebars": "0.5.x",
-    "i18n": "~0.4.1"
+    "i18n": "~0.4.1",
+    "jade": "~1.0.2",
+    "i18next": "~1.7.1"
   },
   "scripts": {
     "postinstall": "./node_modules/bower/bin/bower install"

@@ -1,0 +1,28 @@
+doctype
+
+// [if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif] 
+// [if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]
+// [if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]
+// [if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]
+// [if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]
+
+head
+  meta(charset="utf-8")
+  meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+  title= "Heidi & Rasmus"
+  include includes/head
+body
+  header
+    nav#navigation
+      a(href="#church")= t("church.header")
+      a(href="#rsvp")= t("rsvp.header")
+      a(href="#wishlist")= t("wishlist.header")
+      a(href="#program")= t("program.header")
+      a(href="#hotels")= t("hotels.header")
+  h1.welcome
+    p= "Heidi & Rasmus"
+    p 17.5.2014
+  article.main
+    block church
+  include includes/body
+  include includes/gcf
