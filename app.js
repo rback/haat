@@ -26,16 +26,7 @@ app.configure(function () {
 });
 i18n.registerAppHelper(app)
 
-
 app.get('/', function (req, res) {
-    res.render('main', {
-    	helpers: {
-            __: function (key) { return res.__(key); }
-        }
-    });
-});
-
-app.get('/lol', function (req, res) {
 	res.render('index',	{ pretty: true })
 });
 
