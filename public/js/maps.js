@@ -10,9 +10,9 @@ $(function() {
     showMap = function showMap(location) {
         var mapElement = $("#map-" + location)
         mapElement.find('i').click(function(event) {
-            mapElement.hide()
+            mapElement.fadeOut()
         })
-        mapElement.show()
+        mapElement.fadeIn()
         var map = new google.maps.Map(mapElement.find('.google-maps')[0], {
             center: locations[location],
             zoom: 15,
