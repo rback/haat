@@ -1,60 +1,66 @@
 @import "/js/components/font-awesome/less/font-awesome";
+
 @fa-font-path: "/js/components/font-awesome/fonts";
 
 body {
-	a { text-decoration: none; }
-	font-family: "Arial", "sans-serif";
-	header {
-		background: linear-gradient(0deg, #282D30, #3C4043);
-		nav {
-			.league-gothic-font;
-			font-size: 20px;
-			text-align: center;
-			a {
-				display: inline-block;
-				color: #cecece;
-				padding: 10px;
-			}				
-		}
-	}
-	.welcome {
-		font-size: 32px;
-		text-align: center;
-		margin: 30px 0 30px 0;
-		.sans-serif-font;
-	}
-	.main {
-		padding: 0 10px 0 10px;
-		.banner-image {
-			margin: auto;
-			display: block;
-		}
-	}
+  a {
+    text-decoration: none;
+  }
+  font-family: "Arial", "sans-serif";
+  header {
+    background: linear-gradient(0deg, #282D30, #3C4043);
+    nav {
+      .league-gothic-font;
+      font-size: 20px;
+      text-align: center;
+      a {
+        display: inline-block;
+        color: #cecece;
+        padding: 10px;
+      }
+    }
+  }
+  .welcome {
+    font-size: 32px;
+    text-align: center;
+    margin: 30px 0 30px 0;
+    .sans-serif-font;
+  }
+  .main {
+    padding: 0 10px 0 10px;
+    .banner-image {
+      margin: auto;
+      display: block;
+    }
+  }
 }
 
 .section {
-	margin-top: 20px;
-	text-align: center;
-	* {text-align: left}
-	> h2 {
-		margin-right: 30px;
-		text-align: right;
-		font-size: 32px;
-		.sans-serif-font;
-		width: 300px;
-	}
-	h3 {
-		.sans-serif-font;
-		font-size: 24px;
-	}
-	.divider {
-		display: block;
-		margin: 20px auto;
-	}
+  margin-top: 20px;
+  text-align: center;
+  * {
+    text-align: left
+  }
+  > h2 {
+    margin-right: 30px;
+    text-align: right;
+    font-size: 32px;
+    .sans-serif-font;
+    width: 300px;
+  }
+  h3 {
+    .sans-serif-font;
+    font-size: 24px;
+  }
+  .divider {
+    display: block;
+    margin: 20px auto;
+  }
 }
 
-.contact-box {
+.contact-box, .map-box {
   .serif-font;
+  position: relative;
   display: inline-block;
   padding: 10px;
   margin: 10px;
@@ -74,79 +80,105 @@ body {
 }
 
 .info-box {
-    display: none;
-	width: 400px;
+  display: none;
+  width: 400px;
 }
 
 .inline {
-	vertical-align: top;
-	display: inline-block;
+  vertical-align: top;
+  display: inline-block;
 }
 
 .center-align {
-	text-align: center;
-	* {text-align: left}
+  text-align: center;
+  * {
+    text-align: left
+  }
 }
+
 .break {
-	display: block;
+  display: block;
+}
+
+.map-frame {
+  position: absolute;
+  top: -200px;
+  left: -200px;
+  border-radius: 3px;
+  border: 1px solid lightgrey;
+  padding: 10px;
+  background-color: white;
+  width: 400px;
+  height: 400px;
+  display: none;
+  i {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: -10px;
+    right: -10px;
+    background-color: white;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 50%;
+  }
 }
 
 .google-maps {
-    display: none;
-	width: 400px;
-	height: 400px;
+  width: 100%;
+  height: 100%;
 }
 
 .map-link {
-	display: block;
-	margin-top: 3px;
-	color: black;	
-	.fa {
-		margin-right: 5px;
-		vertical-align: middle;	
-	}
+  display: block;
+  margin-top: 3px;
+  color: black;
+  .fa {
+    margin-right: 5px;
+    vertical-align: middle;
+  }
 }
 
 @font-face {
-    font-family: 'st_marie_thinthin';
-    src: url('/fonts/StMarie-Thin-webfont.eot');
-    src: url('/fonts/StMarie-Thin-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/StMarie-Thin-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'st_marie_thinthin';
+  src: url('/fonts/StMarie-Thin-webfont.eot');
+  src: url('/fonts/StMarie-Thin-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/StMarie-Thin-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
+
 .serif-font() {
-    font-family: st_marie_thinthin, "Times New Roman", Times, serif;
-    font-weight: bolder;
-    font-style: normal;
+  font-family: st_marie_thinthin, "Times New Roman", Times, serif;
+  font-weight: bolder;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'existencelight';
-    src: url('/fonts/Existence-Light-webfont.eot');
-    src: url('/fonts/Existence-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/Existence-Light-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'existencelight';
+  src: url('/fonts/Existence-Light-webfont.eot');
+  src: url('/fonts/Existence-Light-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/Existence-Light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
+
 .sans-serif-font() {
-    font-family: existencelight, Arial, sans-serif;
-    font-weight: normal;
-    font-style: normal;
+  font-family: existencelight, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'league_gothicregular';
-    src: url('/fonts/leaguegothic-regular-webfont.eot');
-    src: url('/fonts/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/leaguegothic-regular-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'league_gothicregular';
+  src: url('/fonts/leaguegothic-regular-webfont.eot');
+  src: url('/fonts/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/leaguegothic-regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
+
 .league-gothic-font() {
-    font-family: league_gothicregular, Arial, sans-serif;
-    font-weight: normal;
-    font-style: normal;
-    letter-spacing: 0.05em;
+  font-family: league_gothicregular, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 0.05em;
 }
 

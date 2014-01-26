@@ -7,6 +7,16 @@ mixin contact-box(map_target)
       span.fa.fa-external-link
       | Näytä kartalla
 
+mixin map-box(map_target)
+  div.map-box
+    div(id='map-#{map_target}').map-frame
+      i.fa.fa-times
+      div.google-maps.inline
+    block
+    a.map-link(href="##{map_target}" onclick="showMap('#{map_target}')")
+      i.fa.fa-external-link
+      | Näytä kartalla
+
 mixin section(name)
   section.section
     h2(id= name).inline= t(name + ".header")
@@ -24,16 +34,14 @@ block church
       p Pukukoodi: tumma puku
     div
     div.center-align
-      +contact-box('')
+      +map-box('johanneksenkirkko')
         p= t("church.address_1")
         p= t("church.address_2")
         p= t("church.address_3")
-      +contact-box('')
+      +map-box('g18')
         p= t("party.address_1")
         p= t("party.address_2")
         p= t("party.address_3")
-    div#map-johanneksenkirkko.google-maps.inline
-    div#map-g18.google-maps.inline
     div.text-box
         p= t("party.directions_1")
         p= t("party.directions_2")
@@ -65,14 +73,13 @@ block hotels
        p= t("hotels.info_2")
     div
     div.center-align
-      +contact-box('')
+      +map-box('hotels')
         p= t("hotels.glo.address_1")
         p= t("hotels.glo.address_2")
         p= t("hotels.glo.address_3")
         p= t("hotels.glo.address_4")
-      +contact-box('')
+      +map-box('hotels')
         p= t("hotels.radisson.address_1")
         p= t("hotels.radisson.address_2")
         p= t("hotels.radisson.address_3")
         p= t("hotels.radisson.address_4")
-    div#map-hotels.google-maps.inline
