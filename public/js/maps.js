@@ -30,7 +30,7 @@ $(function() {
         var map = new google.maps.Map(mapElement.find('.google-maps')[0], {
             center: center,
             zoom: 15,
-            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
         })
         var image = {
             url: locations[location].icon,
@@ -40,7 +40,7 @@ $(function() {
         var marker = new google.maps.Marker({
             position: center,
             map: map,
-            icon: image,
+            icon: image
         });
     }
 
