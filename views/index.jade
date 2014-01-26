@@ -11,6 +11,7 @@ mixin map-box(map_target)
   div.map-box
     div(id='map-#{map_target}').map-frame
       i.fa.fa-times
+      div.border
       div.google-maps.inline
     block
     a.map-link(href="##{map_target}" onclick="showMap('#{map_target}')")
