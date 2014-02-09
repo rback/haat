@@ -1,11 +1,23 @@
-var express = require('express');
-var jade = require('jade');
-var i18n = require("i18next");
-var logfmt = require("logfmt");
-var app = express();
+var express = require('express'),
+	jade = require('jade'),
+	i18n = require("i18next"),
+	logfmt = require("logfmt"),
+	app = express(),
+	passport = require('passport'),
+	BasicStrategy = require('passport-http').BasicStrategy
+
+passport.use(new BasicStrategy({}, function(username, password, done) {
+    if (password == process.env.PASSWORD) {
+    	console.log("PASSWORD: " + password + " is correct")
+    	return done(null, 'cuicca')    	
+    } else {
+    	console.log("PASSWORD: " + password + " is incorrect")
+    	return done(null, false)
+    }
+}))	
 
 app.configure(function () {
-	app.set('views', __dirname + "/views");
+	app.set('views', __dirname + "/views")
 	app.set('view engine', 'jade');
 
 	i18n.init({
@@ -19,16 +31,20 @@ app.configure(function () {
 		debug: true
 	});
 
-	app.use(express.cookieParser());
-	app.use(i18n.handle);
-	app.use(logfmt.requestLogger());
-	app.use(express.static(__dirname + '/public'));
+	app.use(express.cookieParser())
+	app.use(passport.initialize())
+	app.use(i18n.handle)
+	app.use(logfmt.requestLogger())
+	app.use(express.static(__dirname + '/public'))
 });
 i18n.registerAppHelper(app)
 
-app.get('/', function (req, res) {
-	res.render('index',	{ pretty: true })
-});
+app.get('/',
+	passport.authenticate('basic', { session: false }),
+	function (req, res) {
+		res.render('index', { pretty: true })
+	}
+);
 
 app.get('/:locale', function (req, res) {
   res.cookie('locale', req.params.locale);
@@ -37,5 +53,5 @@ app.get('/:locale', function (req, res) {
 
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
-  console.log("Listening on " + port);
+  console.log("Listening on " + port)
 });
