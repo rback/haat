@@ -28,7 +28,7 @@ app.configure(function () {
 		cookieName: 'locale',
 		fallbackLng: 'fi',
 		resGetPath: __dirname + '/locales/__lng__.json',
-		debug: true
+		debug: false
 	});
 
 	app.use(express.cookieParser())
@@ -46,9 +46,9 @@ app.get('/',
 	}
 );
 
-app.get('/:locale', function (req, res) {
-  res.cookie('locale', req.params.locale);
-  res.redirect("/");
+app.get('/locale/:locale', function (req, res) {
+  res.cookie('locale', req.params.locale)
+  res.redirect("/")
 });
 
 var port = process.env.PORT || 5000;
