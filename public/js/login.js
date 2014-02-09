@@ -1,5 +1,5 @@
 $(function() {
     $(".loginbutton").click(function() {
-        $("#login").submit()
+        $("form").submit()
     })
 })

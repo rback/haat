@@ -18,10 +18,10 @@ body
     p= "Heidi & Rasmus"
     p 17.5.2014
   article.main
-    section.section
+    section#login.section
       h2.inline= t("login.header")
-      form.inline#login(action="/login", method="post")
+      form.inline(action="/login", method="post")
           input(type="hidden", name="username", value="cuicca")
           input(type='password', name="password", placeholder= t("login.placeholder"))
-          span.fa.fa-sign-in.loginbutton
+          i.fa.fa-sign-in.loginbutton
   include includes/gcf
