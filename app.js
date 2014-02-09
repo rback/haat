@@ -18,7 +18,7 @@ passport.use(new BasicStrategy({}, function(username, password, done) {
 
 app.configure(function () {
 	app.set('views', __dirname + "/views")
-	app.set('view engine', 'jade');
+	app.set('view engine', 'jade')
 
 	i18n.init({
 		lng: "fi",
@@ -29,14 +29,14 @@ app.configure(function () {
 		fallbackLng: 'fi',
 		resGetPath: __dirname + '/locales/__lng__.json',
 		debug: false
-	});
+	})
 
 	app.use(express.cookieParser())
 	app.use(passport.initialize())
 	app.use(i18n.handle)
 	app.use(logfmt.requestLogger())
 	app.use(express.static(__dirname + '/public'))
-});
+})
 i18n.registerAppHelper(app)
 
 app.get('/',
@@ -44,14 +44,14 @@ app.get('/',
 	function (req, res) {
 		res.render('index', { pretty: true })
 	}
-);
+)
 
 app.get('/locale/:locale', function (req, res) {
   res.cookie('locale', req.params.locale)
   res.redirect("/")
-});
+})
 
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 5000
 app.listen(port, function() {
   console.log("Listening on " + port)
-});
+})
