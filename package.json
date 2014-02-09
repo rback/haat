@@ -1,5 +1,6 @@
 {
-  "name": "hr-haat",
+  "name": "hr2014",
+  "repository": "git@github.com:rback/haat.git",
   "description": "Wedding Site",
   "version": "0.0.1",
   "engines": {
