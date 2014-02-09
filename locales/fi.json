@@ -11,19 +11,18 @@
 		"address_2": "Yrjönkatu 18",
 		"address_3": "00120 Helsinki",
 		"directions_1": "Helsingin keskustasta Johanneksen kirkolle kulkee raitiovaunu numero 10 ja bussi numero 24. Pysäkki “Johanneksen kirkko”. Parkkipaikan löytäminen kirkon tai juhlatilan lähistöltä voi olla haastavaa, joten huomioithan tämän, mikäli saavut juhlaamme autolla!",
-		"directions_2": "Kirkolta juhlapaikalle on n. 450 metrin matka, joka kävellään. Mikäli sinulla on liikuntarajoite ja tarvitset autokuljetuksen kirkolta juhlapaikalle, mainitsethan tästä ilmoittautumisen yhteydessä."
+		"directions_2": "Kirkolta juhlapaikalle on n. 450 metrin kävelymatka. Mikäli sinulla on liikuntarajoite ja tarvitset autokuljetuksen kirkolta juhlapaikalle, mainitsethan tästä ilmoittautumisen yhteydessä."
 	},
 	"rsvp": {
 		"header": "Ilmoittautuminen",
-		"info": "Ilmoitathan tulostasi tai mahdollisesta esteestä 22.4.2014 mennessä. Mainitsethan samalla mahdollisista erikoisruokavaliosta tai allergioista! Kerrothan ilmoittautumisen yhteydessä myös, mikäli sinulla on liikuntarajoite ja tarvitset autokuljetuksen kirkolta juhlapaikalle.",
+		"info": "Ilmoitathan tulostasi tai mahdollisesta esteestä 17.4.2014 mennessä. Mainitsethan samalla mahdollisista erikoisruokavaliosta tai allergioista! Kerrothan ilmoittautumisen yhteydessä myös, mikäli sinulla on liikuntarajoite ja tarvitset autokuljetuksen kirkolta juhlapaikalle.",
 		"nokids": "Otattehan myös huomioon ystävällisen toiveemme juhlia häitämme aikuisten kesken.",
-		"info_2": "Jokainen henkilö erikseen, etunimi, sukunimi. mahdolliset ruokavaliot/allergiat. Lisäksi jos tarvitsee autokyydin",
-		"contact_heidi": "Heidi: 044-299 3211 rissanen.heidi@gmail.com",
-		"contact_rasmus": "Rasmus: 050-564 1171 rasmus.back@gmail.com"
+		"contact_heidi": "Heidi: 044-299 3211",
+		"contact_rasmus": "Rasmus: 050-564 1171 tai heidirasmus1705@gmail.com"
 	},
 	"wishlist": {
 		"header": "Lahjat ja muistamiset",
-		"info": "Häihin osallistumisen ehto ei ole lahjojen tuonti - tärkeintä on, että tuotte itsenne paikalle juhlimaan kanssamme tärkeää päiväämme. Jos kuitenkin haluatte muistaa meitä jotenkin, meillä on lahjalista täällä TBD. "
+		"info": "Häihin osallistumisen ehto ei ole lahjojen tuonti - tärkeintä on, että tuotte itsenne paikalle juhlimaan kanssamme tärkeää päiväämme. Jos kuitenkin haluatte muistaa meitä lahjalla, haaveil "
 	},
 	"program": {
 		"header": "Ohjelmanumerot",
