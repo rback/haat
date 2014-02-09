@@ -44,5 +44,9 @@
 			"address_3": "00180 Helsinki",
 			"address_4": "+358 20 1234 707"
 		}
+	},
+	"login": {
+		"header": "Sisäänkirjautuminen",
+		"placeholder": "salasana"
 	}
 }

@@ -4,17 +4,27 @@ var express = require("express"),
 	logfmt = require("logfmt"),
 	app = express(),
 	passport = require("passport"),
-	BasicStrategy = require("passport-http").BasicStrategy
+	LocalStrategy = require("passport-local").Strategy
 
-passport.use(new BasicStrategy({}, function(username, password, done) {
-    if (password == process.env.PASSWORD) {
+var user = { id: 1, username: "cuicca", password: process.env.PASSWORD }
+
+passport.use(new LocalStrategy(function(username, password, done) {
+    if (password == user.password) {
     	console.log("PASSWORD: " + password + " is correct")
-    	return done(null, "cuicca")
+    	return done(null, user)
     } else {
     	console.log("PASSWORD: " + password + " is incorrect")
     	return done(null, false)
     }
-}))	
+}))
+
+passport.serializeUser(function(user, done) { done(null, user.id) })
+passport.deserializeUser(function(id, done) { done(null, user) })
+
+function ensureAuthenticated(req, res, next) {
+  if (req.isAuthenticated()) { return next() }
+  res.redirect('/login')
+}
 
 app.configure(function () {
 	app.set("views", __dirname + "/views")
@@ -31,23 +41,35 @@ app.configure(function () {
 		debug: false
 	})
 
-	app.use(express.cookieParser())
-	app.use(passport.initialize())
-	app.use(i18n.handle)
+	app.use(express.cookieParser());
+	app.use(express.bodyParser());
+	app.use(express.session({ secret: "lolbal" }));
+	app.use(passport.initialize());
+	app.use(passport.session());
+  	app.use(i18n.handle)
 	app.use(logfmt.requestLogger())
 	app.use(express.static(__dirname + "/public"))
 })
 i18n.registerAppHelper(app)
 
-app.get("/",
-	passport.authenticate("basic", { session: false }),
+app.get("/", ensureAuthenticated, function (req, res) {
+	res.render("index", { pretty: true })
+})
+
+app.get("/login", function(req, res) {
+	res.render("login", { pretty: true })
+})
+
+app.post("/login",
+	passport.authenticate("local"),
 	function (req, res) {
-		res.render("index", { pretty: true })
+	  res.redirect("/")
 	}
 )
 
-app.get("/login", function(req, res) {
-	res.render("")
+app.get("/logout", function(req, res){
+  req.logout()
+  res.redirect("/")
 })
 
 app.get("/locale/:locale", function (req, res) {
