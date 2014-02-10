@@ -60,14 +60,9 @@ app.get("/login", function(req, res) {
 	res.render("login", { pretty: true })
 })
 
-app.post("/login",
-	passport.authenticate("local", {failureRedirect: "/login"}),
-	function (req, res) {
-	  res.redirect("/")
-	}
-)
+app.post("/login", passport.authenticate("local", { failureRedirect: "/login", successRedirect: "/" }))
 
-app.get("/logout", function(req, res){
+app.get("/logout", function(req, res) {
   req.logout()
   res.redirect("/")
 })
