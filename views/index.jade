@@ -56,19 +56,16 @@ block rsvp
         p= t('rsvp.contact_heidi')
         p= t('rsvp.contact_rasmus')
 
-block wishlist
-  +section('wishlist')
+block giftlist
+  +section('giftlist')
     div.inline.text-box
-      p= t("wishlist.info")
+      p= t("giftlist.info")
       div.center-align.test
-        a.link-with-icon.inline(href="https://haapalvelu.stockmann.fi/fin/giftlist/giftlist_search.asp")
-          span.fa.fa-external-link
+        a.link-with-icon.inline.giftlist(href="#giftlist")
           | Elämykset
         a.link-with-icon.inline(href="https://haapalvelu.stockmann.fi/fin/giftlist/giftlist_search.asp")
           span.fa.fa-external-link
           | Stockmann
-
-
 
 block program
   +section('program')
