@@ -18,9 +18,17 @@
     "passport-local": "~0.1.6"
   },
   "devDependencies": {
-    "nodemon": "~1.0.14"
+    "nodemon": "~1.0.14",
+    "gulp-util": "~2.2.14",
+    "gulp": "~3.5.2",
+    "gulp-bower": "0.0.2",
+    "gulp-less": "~1.2.1",
+    "gulp-minify-css": "~0.3.0",
+    "gulp-useref": "~0.1.2",
+    "gulp-uglify": "~0.2.1",
+    "gulp-concat": "~2.1.7"
   },
   "scripts": {
-    "postinstall": "./node_modules/bower/bin/bower install"
+    "postinstall": "./node_modules/gulp/bin/gulp.js"
   }
 }

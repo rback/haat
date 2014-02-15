@@ -19,3 +19,5 @@ public/js/components
 .idea
 *.iml
 *.sublime-*
+
+dist
