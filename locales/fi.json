@@ -1,7 +1,7 @@
 {
 	"church": {
 		"header": "Vihkiminen & hääjuhla",
-		"ceremony": "Vihkiminen tapahtuu Johanneksen kirkossa, Helsingissä klo 16.00. Vihkimisen jälkeen hääjuhlaamme vietetään G18-juhlasalissa.",
+		"ceremony": "Vihkiminen tapahtuu Johanneksen kirkossa Helsingissä kello 16.00. Vihkimisen jälkeen hääjuhlaamme vietetään G18-juhlasalissa.",
 		"address_1": "Johanneksen kirkko",
 		"address_2": "Korkeavuorenkatu 12",
 		"address_3": "00120 Helsinki"
@@ -10,7 +10,7 @@
 		"address_1": "G18 juhlasali",
 		"address_2": "Yrjönkatu 18",
 		"address_3": "00120 Helsinki",
-		"directions_1": "Helsingin keskustasta Johanneksen kirkolle kulkee raitiovaunu numero 10 ja bussi numero 24. Pysäkki “Johanneksen kirkko”. Parkkipaikan löytäminen kirkon tai juhlatilan lähistöltä voi olla haastavaa, joten huomioithan tämän, mikäli saavut juhlaamme autolla!",
+		"directions_1": "Helsingin keskustasta Johanneksen kirkolle kulkee raitiovaunu numero 10 ja bussi numero 24. Pysäkki “Johanneksen kirkko”. Parkkipaikan löytäminen kirkon tai juhlatilan lähistöltä voi olla haastavaa, joten huomioithan tämän, mikäli saavut juhlaamme autolla! Läheltä löytyy myös pysäköintihalleja, esim. Kasarmitorin tai Erottajan Q-parkit ovat lähellä.",
 		"directions_2": "Kirkolta juhlapaikalle on n. 450 metrin kävelymatka. Mikäli sinulla on liikuntarajoite ja tarvitset autokuljetuksen kirkolta juhlapaikalle, mainitsethan tästä ilmoittautumisen yhteydessä."
 	},
 	"rsvp": {
@@ -22,7 +22,7 @@
 	},
 	"giftlist": {
 		"header": "Lahjat ja muistamiset",
-		"info": "Häihin osallistumisen ehto ei ole lahjojen tuonti - tärkeintä on, että tuotte itsenne paikalle juhlimaan kanssamme tärkeää päiväämme. Häiden jälkeen lähdemme häämatkalle, joten lahjojen sijasta toivomme elämyksiä matkallemme. Elämyksiä, joita toivomme kokevamme, löydät alta. Häämatkatili: xxx-xxx. Jos mieluummin käärit lahjan pakettiin, voit tutustua Stockmannin lahjalistaamme täällä"
+		"info": "Häihin osallistumisen ehto ei ole lahjojen tuonti - tärkeintä on, että pääsette juhlimaan kanssamme tärkeää päiväämme. Häiden jälkeen lähdemme häämatkalle, joten lahjojen sijasta toivomme elämyksiä matkallemme. Elämyksiä, joita toivomme kokevamme, löydät täältä www.lahjalista.net/heidirasmus, salasana 1705. Jos mieluummin käärit lahjan pakettiin, löytyy listalta myös joitain meille tarpeellisia tavaroita."
 	},
 	"program": {
 		"header": "Ohjelmanumerot",
