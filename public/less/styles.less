@@ -59,7 +59,7 @@ body {
 }
 
 .contact-box, .map-box {
-  .serif-font;
+  .serif-font();
   position: relative;
   display: inline-block;
   padding: 10px;
@@ -70,12 +70,11 @@ body {
 }
 
 .text-box {
-  .serif-font;
+  .serif-font();
   p {
     max-width: 600px;
     padding-bottom: 5px;
     text-align: left;
-    font-size: 18px;
   }
 }
 
@@ -276,6 +275,22 @@ form {
 }
 
 @font-face {
+    font-family: 'josefin_slablight';
+    src: url('/fonts/josefinslab-light-webfont.eot');
+    src: url('/fonts/josefinslab-light-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/josefinslab-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'josefin_slabthin';
+    src: url('/fonts/josefinslab-thin-webfont.eot');
+    src: url('/fonts/josefinslab-thin-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/josefinslab-thin-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
   font-family: 'st_marie_thinthin';
   src: url('/fonts/StMarie-Thin-webfont.eot');
   src: url('/fonts/StMarie-Thin-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/StMarie-Thin-webfont.ttf') format('truetype');
@@ -284,9 +299,10 @@ form {
 }
 
 .serif-font() {
-  font-family: st_marie_thinthin, "Times New Roman", Times, serif;
-  font-weight: bolder;
+  font-family: "josefin_slablight", "Times New Roman", Times, serif;
+  font-weight: normal;
   font-style: normal;
+  font-size: 20px;
 }
 
 @font-face {
@@ -319,4 +335,3 @@ form {
   font-size: 20px;
   color: #cecece;
 }
-
