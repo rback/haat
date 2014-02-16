@@ -1,11 +1,11 @@
 extend layout
 
-mixin contact-box(map_target)
+mixin contact-box(email)
   div.contact-box
     block
-    a.link-with-icon(href="mailto:lol@bal.com")
-      span.fa.fa-envelope-o
-      | Ota yhteyttä
+    a.link-with-icon(href="mailto:#{email}")
+      i.fa.fa-envelope-o
+      | #{email}
 
 mixin map-box(map_target)
   div.map-box
@@ -52,7 +52,7 @@ block rsvp
       p= t("rsvp.info")
       p= t("rsvp.nokids")
     div.center-align
-      +contact-box('')
+      +contact-box('heidirasmus1705@gmail.com')
         p= t('rsvp.contact_heidi')
         p= t('rsvp.contact_rasmus')
 
