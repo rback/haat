@@ -16,7 +16,7 @@ gulp.task('bower', function() {
 gulp.task('copy', function () {
 	// Copy all application files except *.less and .js into the `dist` folder
     return gulp.src(['public/**', '!public/js/**', '!public/less/**'])
-	    .pipe(gulp.dest('dist'))
+	    .pipe(gulp.dest('./dist'))
 });
 
 gulp.task('less', function () {
@@ -33,11 +33,11 @@ gulp.task('scripts', function() {
   return gulp.src('public/js/*.js')
     .pipe(uglify())
     .pipe(concat('scripts.js'))
-    .pipe(gulp.dest('dist/js'));
+    .pipe(gulp.dest('./dist/js'));
 });
 
 gulp.task('clean', function() {
-  gulp.src('dist', {read: false})
+  gulp.src('./dist', {read: false})
     .pipe(clean());
 });
 
