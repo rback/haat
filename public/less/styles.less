@@ -12,12 +12,10 @@ body {
   header {
     background: linear-gradient(0deg, #282D30, #3C4043);
     nav {
-      .league-gothic-font;
-      font-size: 20px;
       text-align: center;
       a {
+        .league-gothic-font();
         display: inline-block;
-        color: #cecece;
         padding: 10px;
       }
     }
@@ -239,6 +237,44 @@ form {
   }
 }
 
+.language {
+  .league-gothic-font();
+  position: absolute;
+  cursor: pointer;
+  padding: 10px;
+  i {
+    margin-right: 5px;
+  }
+}
+
+.dropdown {
+  background-color: white;
+  color: black;
+  border: 1px solid lightgrey;
+  display: none;
+  position: absolute;
+  padding: 3px;
+  border-radius: 3px;
+  li {
+    padding-left: 30px;
+    &[data-language="fi"] {
+      background: url("/img/flag_suomi.png") no-repeat;
+      background-size: contain;
+    }
+    &[data-language="sv"] {
+      background: url("/img/flag_sverige.png") no-repeat;
+      background-size: contain;
+    }
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+  &.expanded {
+    display: inline-block;
+  }
+}
+
 @font-face {
   font-family: 'st_marie_thinthin';
   src: url('/fonts/StMarie-Thin-webfont.eot');
@@ -279,6 +315,8 @@ form {
   font-family: league_gothicregular, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
+  font-size: 20px;
+  color: #cecece;
 }
 

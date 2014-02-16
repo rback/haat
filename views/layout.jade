@@ -14,6 +14,13 @@ head
   include includes/scripts
 body
   header
+    div.language
+      i.fa.fa-flag-o
+      =t("language")
+      div.dropdown
+        ul
+          li(data-language="fi") Suomi
+          li(data-language="sv") Svenska
     nav#navigation
       a(href="#church")= t("church.header")
       a(href="#rsvp")= t("rsvp.header")

@@ -50,5 +50,6 @@
 	"login": {
 		"header": "Sisäänkirjautuminen",
 		"placeholder": "salasana"
-	}
+	},
+	"language": "Kieli"
 }
