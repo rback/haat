@@ -6,6 +6,7 @@ var path = require('path');
 var minifyCSS = require('gulp-minify-css');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var clean = require('gulp-clean');
 
 gulp.task('bower', function() {
   bower()
@@ -34,6 +35,13 @@ gulp.task('scripts', function() {
     .pipe(concat('scripts.js'))
     .pipe(gulp.dest('dist/js'));
 });
+
+gulp.task('clean', function() {
+  gulp.src('dist', {read: false})
+    .pipe(clean());
+});
+
+gulp.task('dist', ['copy', 'bower', 'less', 'scripts']);
 
 gulp.task('default', function(){
   // place code for your default task here

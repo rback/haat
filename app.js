@@ -6,6 +6,7 @@ var express = require("express"),
 	passport = require("passport"),
 	LocalStrategy = require("passport-local").Strategy
 
+var publicDir = process.env.NODE_ENV === "production" ? "/dist" : "/public"
 var user = { id: 1, username: "cuicca", password: process.env.PASSWORD }
 
 passport.use(new LocalStrategy(function(username, password, done) {
@@ -48,7 +49,7 @@ app.configure(function () {
 	app.use(passport.session());
   	app.use(i18n.handle)
 	app.use(logfmt.requestLogger())
-	app.use(express.static(__dirname + "/public"))
+	app.use(express.static(__dirname + publicDir))
 })
 i18n.registerAppHelper(app)
 
