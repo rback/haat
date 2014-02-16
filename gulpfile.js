@@ -8,6 +8,11 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var clean = require('gulp-clean');
 
+var paths {
+  src: path.join(__dirname, 'public'), 
+  dist: path.join(__dirname, 'dist')
+}
+
 gulp.task('bower', function() {
   bower()
   .pipe(gulp.dest('./dist/js/components'))
@@ -20,7 +25,7 @@ gulp.task('copy', function () {
 });
 
 gulp.task('less', function () {
-  gulp.src('./public/less/styles.less')
+  gulp.src( path.join(__dirname, 'public/less/styles.less') )
     .pipe(less({
       paths: [ path.join(__dirname, 'public') ]
     }))
