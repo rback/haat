@@ -35,7 +35,7 @@ app.configure(function () {
 		lng: "fi",
 		useCookie: true,
 		detectLngFromHeaders: false,
-		supportedLngs: ["fi", "se", "en"],
+		supportedLngs: ["fi", "sv", "en"],
 		cookieName: "locale",
 		fallbackLng: "fi",
 		resGetPath: __dirname + "/locales/__lng__.json",
