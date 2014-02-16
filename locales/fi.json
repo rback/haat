@@ -4,7 +4,8 @@
 		"ceremony": "Vihkiminen tapahtuu Johanneksen kirkossa Helsingissä kello 16.00. Vihkimisen jälkeen hääjuhlaamme vietetään G18-juhlasalissa.",
 		"address_1": "Johanneksen kirkko",
 		"address_2": "Korkeavuorenkatu 12",
-		"address_3": "00120 Helsinki"
+		"address_3": "00120 Helsinki",
+		"dresscode": "Pukukoodi: tumma puku"
 	},
 	"party": {
 		"address_1": "G18 juhlasali",
@@ -12,8 +13,6 @@
 		"address_3": "00120 Helsinki",
 				"directions_1": "Helsingin keskustasta Johanneksen kirkolle kulkee raitiovaunu numero 10 ja bussi numero 24. Pysäkki “Johanneksen kirkko”. Parkkipaikan löytäminen kirkon tai juhlatilan lähistöltä voi olla haastavaa, joten huomioithan tämän, mikäli saavut juhlaamme autolla! Läheltä löytyy myös pysäköintihalleja, esim. Kasarmitorin tai Erottajan Q-parkit ovat lähellä.",
 			"directions_2": "Kirkolta juhlapaikalle on n. 450 metrin kävelymatka. Mikäli sinulla on liikuntarajoite ja tarvitset autokuljetuksen kirkolta juhlapaikalle, mainitsethan tästä ilmoittautumisen yhteydessä."
-
-	
 	},
 	"rsvp": {
 		"header": "Ilmoittautuminen",
@@ -24,13 +23,14 @@
 	},
 	"giftlist": {
 		"header": "Lahjat ja muistamiset",
-		"info": "Häihin osallistumisen ehto ei ole lahjojen tuonti - tärkeintä on, että pääsette juhlimaan kanssamme tärkeää päiväämme. Jos haluatte muistaa meitä jotenkin, niin meille mieluisin lahja ovat uudet kokemukset ja elämykset häämatkallamme. Hääämatkakassaamme voi kartuttaa tilille FI30 3939 0037 9272 66 (Rasmus Back). Mikäli mieluummin käärit lahjan pakettiin, löytyy lahjalistamme täältä: www.lahjalista.net/heidirasmus, salasana 1705."
+		"info": "Häihin osallistumisen ehto ei ole lahjojen tuonti - tärkeintä on, että pääsette juhlimaan kanssamme tärkeää päiväämme. Jos haluatte muistaa meitä jotenkin, niin meille mieluisin lahja ovat uudet kokemukset ja elämykset häämatkallamme. Hääämatkakassaamme voi kartuttaa tilille FI30 3939 0037 9272 66 (Rasmus Back). Mikäli mieluummin käärit lahjan pakettiin, löytyy lahjalistamme alla olevaa linkkiä seuraamalla, salasana on 1705.",
+		"link_name": "Lahjalista"
 	},
 	"program": {
 		"header": "Ohjelmanumerot",
 		"info": "Jos haluat pitää häissämme puheen tai olet suunnitellut jonkin muun ohjelmanumeron, niin ilmoitathan siitä mielellään etukäteen toast madamelle tai toast masterille.",
 		"contact_irkku": "Irene Rissanen: 040-7467968",
-		"contact_johan": "Johan Back: 000-1234567"
+		"contact_johan": "Johan Back: 040 5648988"
 	},
 	"hotels": {
 		"header": "Yöpyminen",
@@ -53,5 +53,6 @@
 		"header": "Sisäänkirjautuminen",
 		"placeholder": "salasana"
 	},
-	"language": "Kieli"
+	"language": "Kieli",
+	"show_on_map": "Näytä kartalla"
 }

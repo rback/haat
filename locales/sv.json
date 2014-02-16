@@ -1,40 +1,41 @@
 {
 	"church": {
-		"header": "Vigsel & festen",
-		"ceremony": "Vi gifter oss i Johanneskyrkan i Helsingfors klockan 16.00. Efter vigseln fortsätter vi med bröllopsfesten i G18-festsalen.",
+		"header": "Vigsel & bröllopsfest",
+		"ceremony": "Vi gifter oss i Johanneskyrkan i Helsingfors klockan 16.00. Efter vigseln fortsätter vi med bröllopsfest i festsalen G18.",
 		"address_1": "Johanneskyrkan",
 		"address_2": "Högbergsgatan 12",
-		"address_3": "00120 Helsingfors"
+		"address_3": "00120 Helsingfors",
+		"dresscode": "Klädsel: mörk kostym"
 	},
 	"party": {
-		"address_1": "G18 festsal",
+		"address_1": "G18",
 		"address_2": "Georgsgatan 18",
 		"address_3": "00120 Helsingfors",
-		"directions_1": "Man kommer till Johanneskyrkan från Helsingfors centrum med spårvagn nummer 10 och buss nummer 24. Hållplats: 'Johanneskyrkan'. Om du tänker komma med egen bil, ta hänsyn till, att det kan vara svårt att hitta en parkeringsplats i närheten av kyrkan och festlokalen.",
-		"directions_2": "Det är ca 450 meter gåavstånd från kyrkan till festlokalen. Om du behöver bilfärd från kyrkan till festlokalen, vänligen informera om detta i samband med anmälan."
+		"directions_1": "Från Helsingfors centrum går spårvagn nummer 10 och buss nummer 24 till Johanneskyrkan. Hållplatsen är \"Johanneskyrkan\". Om ni kommer med egen bil, observera att det kan vara svårt att hitta en parkeringsplats i närheten av kyrkan och festlokalen.",
+		"directions_2": "Festlokalen ligger på 450 meters promenadsavstånd från kyrkan. Vänligen meddela i samband med anmälan om ni behöver biltransport från kyrkan till festlokalen."
 	},
 	"rsvp": {
-		"header": "RSVP",
-		"info": "rsvp_info",
-		"nokids": "rsvp_nokids",
-		"info_2": "rsvp_info.2",
+		"header": "O.s.a",
+		"info": "OSA senast 17.4.2014. Vänligen meddela om eventuella specialdieter i samband med anmälan. Meddela också om ni behöver biltransport från kyrkan till festlokalen.",
+		"nokids": "Vi önskar fira vår bröllopsdag i vuxet sällskap.",
 		"contact_heidi": "Heidi: 044-299 3211",
 		"contact_rasmus": "Rasmus: 050-564 1171"
 	},
 	"giftlist": {
 		"header": "Önskelista",
-		"info": "Vi är mest glada över att ni vill dela den här dagen med oss, men om ni dessutom vill ge en gåva, så är ett bidrag mycket välkommet till en upplevelse på vår bröllopsresa. Vårt kontonummer är: FI30 3939 0037 9272 66 (Rasmus Back). Vi har också en önskelista här: www.lahjalista.net/heidirasmus, lösenord 1705."
+		"info": "Vi är mest glada över att ni vill dela den här dagen med oss, men om ni dessutom vill ge en gåva, så är ett bidrag mycket välkommet till en upplevelse på vår bröllopsresa. Vårt kontonummer är: FI30 3939 0037 9272 66 (Rasmus Back). Länken till vår önskelista för bröllopsgåvor finns nedan, lösenordet är 1705.",
+		"link_name": "Önskelista"
 	},
 	"program": {
 		"header": "Program",
-		"info": "Om man vill hålla tal, eller framföra någon annan programnummer, vänligen meddela toast madame eller toast master i förhand.",
+		"info": "Om Ni vill hålla tal, eller framföra något annat programnummer, vänligen meddela toastmadame eller toastmaster på förhand.",
 		"contact_irkku": "Irene Rissanen: 040-7467968",
-		"contact_johan": "Johan Back: 000-1234567"
+		"contact_johan": "Johan Back: 040-5648988"
 	},
 	"hotels": {
-		"header": "Boende",
-		"info": "hotels_info",
-		"info_2": "hotels_info.2",
+		"header": "Hotell",
+		"info": "Festlokalen är i Helsingfors centrum, där det finns flera hotell i närheten. Vi har inte reserverat rum i förväg, utan låter Er välja vilket hotell ni vill övernatta i",
+		"info_2": "Vi kan rekommendera följande hotell, som båda också har eget parkeringsgarage",
 		"glo": {
 			"address_1": "Hotel Glo Art",
 			"address_2": "Lönnrotsgatan 20",
@@ -52,5 +53,6 @@
 		"header": "Logga in",
 		"placeholder": "lösenord"
 	},
-	"language": "Språk"
+	"language": "Språk",
+	"show_on_map": "Visa på kartan"
 }

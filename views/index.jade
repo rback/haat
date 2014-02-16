@@ -16,7 +16,7 @@ mixin map-box(map_target)
     block
     a.link-with-icon(href="##{map_target}" onclick="showMap('#{map_target}')")
       i.fa.fa-external-link
-      | Näytä kartalla
+      =t("show_on_map")
 
 mixin section(name)
   section.section
@@ -32,7 +32,7 @@ block church
       //<p>Sanomme toisillemme tahdon lauantaina 17.5.2014 Helsingissä – toivottavasti pääset osallistumaan suureen päiväämme!</p>
         <p>Muistathan ilmoittautua (linkki) 22.4.2014 (TBD) mennessä. Otathan yhteyttä (linkki) mikäli sinulla on kysyttävää
         (linkki) juhlaamme liittyen tai haluat esimerkiksi esittää ohjelmanumeron (linkki).</p>
-      p Pukukoodi: tumma puku
+      p= t("church.dresscode")
     div
     div.center-align
       +map-box('johanneksenkirkko')
