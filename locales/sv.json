@@ -16,7 +16,7 @@
 	},
 	"rsvp": {
 		"header": "O.s.a",
-		"info": "OSA senast 17.4.2014. Vänligen meddela om eventuella specialdieter i samband med anmälan. Meddela också om ni behöver biltransport från kyrkan till festlokalen.",
+		"info": "O.s.a. senast 17.4.2014. Vänligen meddela om eventuella specialdieter i samband med anmälan. Meddela också om ni behöver biltransport från kyrkan till festlokalen.",
 		"nokids": "Vi önskar fira vår bröllopsdag i vuxet sällskap.",
 		"contact_heidi": "Heidi: 044-299 3211",
 		"contact_rasmus": "Rasmus: 050-564 1171"
@@ -28,14 +28,14 @@
 	},
 	"program": {
 		"header": "Program",
-		"info": "Om Ni vill hålla tal, eller framföra något annat programnummer, vänligen meddela toastmadame eller toastmaster på förhand.",
+		"info": "Om ni vill hålla tal, eller framföra något annat programnummer, vänligen meddela toastmadame eller toastmaster på förhand.",
 		"contact_irkku": "Irene Rissanen: 040-7467968",
 		"contact_johan": "Johan Back: 040-5648988"
 	},
 	"hotels": {
 		"header": "Hotell",
 		"info": "Festlokalen är i Helsingfors centrum, där det finns flera hotell i närheten. Vi har inte reserverat rum i förväg, utan låter Er välja vilket hotell ni vill övernatta i",
-		"info_2": "Vi kan rekommendera följande hotell, som båda också har eget parkeringsgarage",
+		"info_2": "Vi kan rekommendera följande hotell, som båda också har eget parkeringsgarage.",
 		"glo": {
 			"address_1": "Hotel Glo Art",
 			"address_2": "Lönnrotsgatan 20",
