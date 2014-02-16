@@ -8,7 +8,7 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var clean = require('gulp-clean');
 
-var paths {
+var paths = {
   src: path.join(__dirname, 'public'), 
   dist: path.join(__dirname, 'dist')
 }
