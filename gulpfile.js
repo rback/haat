@@ -19,13 +19,12 @@ gulp.task('bower', function() {
 });
 
 gulp.task('copy', function () {
-	// Copy all application files except *.less and .js into the `dist` folder
-    return gulp.src(['public/**', '!public/js/**', '!public/less/**'])
-	    .pipe(gulp.dest('./dist'))
+  return gulp.src(['public/**', '!public/js/**', '!public/less/**'])
+    .pipe(gulp.dest('./dist'))
 });
 
-gulp.task('less', function () {
-  gulp.src( path.join(__dirname, 'public/less/styles.less') )
+gulp.task('less', ['bower'], function () {
+  return gulp.src( path.join(__dirname, 'public/less/styles.less') )
     .pipe(less({
       paths: [ path.join(__dirname, 'public') ]
     }))
@@ -34,7 +33,6 @@ gulp.task('less', function () {
 });
 
 gulp.task('scripts', function() {
-  // Minify and copy all JavaScript (except vendor scripts)
   return gulp.src('public/js/*.js')
     .pipe(uglify())
     .pipe(concat('scripts.js'))
@@ -46,7 +44,7 @@ gulp.task('clean', function() {
     .pipe(clean());
 });
 
-gulp.task('dist', ['copy', 'bower', 'less', 'scripts']);
+gulp.task('dist', ['copy', 'less', 'scripts']);
 
 gulp.task('default', function(){
   // place code for your default task here
