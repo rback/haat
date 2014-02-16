@@ -15,7 +15,10 @@
     "jade": "~1.0.2",
     "i18next": "~1.7.1",
     "passport": "~0.2.0",
-    "passport-local": "~0.1.6",
+    "passport-local": "~0.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "~1.0.14",
     "gulp-util": "~2.2.14",
     "gulp": "~3.5.2",
     "gulp-bower": "0.0.2",
@@ -25,11 +28,5 @@
     "gulp-uglify": "~0.2.1",
     "gulp-concat": "~2.1.7",
     "gulp-clean": "~0.2.4"
-  },
-  "devDependencies": {
-    "nodemon": "~1.0.14"
-  },
-  "scripts": {
-    "postinstall": "./node_modules/gulp/bin/gulp.js dist"
   }
 }
