@@ -27,7 +27,9 @@
 	},
 	"program": {
 		"header": "Program",
-		"info": "Om man vill hålla tal, eller framföra någon annan programnummer, vänligen meddela toast madame eller toast master i förhand."
+		"info": "Om man vill hålla tal, eller framföra någon annan programnummer, vänligen meddela toast madame eller toast master i förhand.",
+		"contact_irkku": "Irene Rissanen: 040-7467968",
+		"contact_johan": "Johan Back: 000-1234567"
 	},
 	"hotels": {
 		"header": "Boende",

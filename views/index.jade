@@ -72,9 +72,14 @@ block giftlist
           | Stockmann
 
 block program
-  +section('program')
+  +section("program")
     div.inline.text-box
       p= t("program.info")
+    div.center-align
+      +contact-box("irene.rissanen@lego.com")
+        p= t("program.contact_irkku")
+      +contact-box("johan.j.back@gmail.com")
+        p= t("program.contact_johan")
 
 block hotels
   +section('hotels')

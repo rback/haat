@@ -26,7 +26,9 @@
 	},
 	"program": {
 		"header": "Ohjelmanumerot",
-		"info": "Jos haluat pitää häissämme puheen tai olet suunnitellut jonkin muun ohjelmanumeron, niin ilmoitathan siitä mielellään etukäteen toast madamelle tai toast masterille."
+		"info": "Jos haluat pitää häissämme puheen tai olet suunnitellut jonkin muun ohjelmanumeron, niin ilmoitathan siitä mielellään etukäteen toast madamelle tai toast masterille.",
+		"contact_irkku": "Irene Rissanen: 040-7467968",
+		"contact_johan": "Johan Back: 000-1234567"
 	},
 	"hotels": {
 		"header": "Yöpyminen",
