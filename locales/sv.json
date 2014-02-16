@@ -23,7 +23,7 @@
 	},
 	"giftlist": {
 		"header": "Önskelista",
-		"info": "Din närvaro på vår dag är självklart viktigast för oss men om du vill bidra med en gåva, har vi en önskelista här. TBD"
+		"info": "Vi är mest glada över att ni vill dela den här dagen med oss, men om ni dessutom vill ge en gåva, så är ett bidrag mycket välkommet till en upplevelse på vår bröllopsresa. Vårt kontonummer är: FI30 3939 0037 9272 66 (Rasmus Back). Vi har också en önskelista här: www.lahjalista.net/heidirasmus, lösenord 1705."
 	},
 	"program": {
 		"header": "Program",
@@ -47,6 +47,10 @@
 			"address_3": "00180 Helsingfors",
 			"address_4": "+358 20 1234 707"
 		}
+	},
+	"login": {
+		"header": "Logga in",
+		"placeholder": "lösenord"
 	},
 	"language": "Språk"
 }
