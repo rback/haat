@@ -6,15 +6,14 @@ var express = require("express"),
 	passport = require("passport"),
 	LocalStrategy = require("passport-local").Strategy
 
-var publicDir = process.env.NODE_ENV === "production" ? "/dist" : "/public"
+var staticDir = process.env.NODE_ENV === "production" ? "/dist" : "/public"
 var user = { id: 1, username: "cuicca", password: process.env.PASSWORD }
 
 passport.use(new LocalStrategy(function(username, password, done) {
     if (password == user.password) {
-    	console.log("PASSWORD: " + password + " is correct")
     	return done(null, user)
     } else {
-    	console.log("PASSWORD: " + password + " is incorrect")
+        logfmt.log({action: "login", success: false, password: password})
     	return done(null, false)
     }
 }))
@@ -27,30 +26,29 @@ function ensureAuthenticated(req, res, next) {
   res.redirect('/login')
 }
 
-app.configure(function () {
-	app.set("views", __dirname + "/views")
-	app.set("view engine", "jade")
+app.set("views", __dirname + "/views")
+app.set("view engine", "jade")
 
-	i18n.init({
-		lng: "fi",
-		useCookie: true,
-		detectLngFromHeaders: false,
-		supportedLngs: ["fi", "sv"],
-		cookieName: "locale",
-		fallbackLng: "fi",
-		resGetPath: __dirname + "/locales/__lng__.json",
-		debug: false
-	})
-
-	app.use(express.cookieParser());
-	app.use(express.bodyParser());
-	app.use(express.session({ secret: "lolbal" }));
-	app.use(passport.initialize());
-	app.use(passport.session());
-  	app.use(i18n.handle)
-	app.use(logfmt.requestLogger())
-	app.use(express.static(__dirname + publicDir))
+i18n.init({
+    lng: "fi",
+    useCookie: true,
+    detectLngFromHeaders: false,
+    supportedLngs: ["fi", "sv"],
+    cookieName: "locale",
+    fallbackLng: "fi",
+    resGetPath: __dirname + "/locales/__lng__.json",
+    debug: false
 })
+app.use(express.cookieParser('S3CRE7'))
+app.use(express.cookieSession())
+app.use(express.urlencoded())
+app.use(express.json())
+app.use(passport.initialize())
+app.use(passport.session())
+app.use(i18n.handle)
+app.use(express.static(__dirname + staticDir))
+app.use(logfmt.requestLogger())
+
 i18n.registerAppHelper(app)
 
 app.get("/", ensureAuthenticated, function (req, res) {
