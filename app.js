@@ -47,7 +47,11 @@ app.use(passport.initialize())
 app.use(passport.session())
 app.use(i18n.handle)
 app.use(express.static(__dirname + staticDir))
-app.use(logfmt.requestLogger())
+app.use(logfmt.requestLogger(function(req, res) {
+    var format = logfmt.requestLogger.commonFormatter(req, res)
+    format["user-agent"] = req.headers['user-agent']
+    return format
+}))
 
 i18n.registerAppHelper(app)
 
