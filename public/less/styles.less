@@ -1,6 +1,7 @@
 @import (less) "reset.css";
 @import (less) "styles.css";
 @import "/js/components/font-awesome/less/font-awesome";
+@import "cross-browser";
 
 @fa-font-path: "/js/components/font-awesome/fonts";
 
@@ -10,7 +11,7 @@ body {
   }
   font-family: "Arial", "sans-serif";
   header {
-    background: linear-gradient(0deg, #282D30, #3C4043);
+    .background-linear-gradient(~"0deg, #282D30, #3C4043");
     nav {
       text-align: center;
       a {
@@ -164,7 +165,7 @@ form {
     &:focus {
       opacity: 1;
       outline: 0;
-      box-shadow: 0 0 0 2px #ccdae3;
+      .box-shadow(~"0 0 0 2px #ccdae3");
     }
   }
   .loginbutton {
@@ -262,11 +263,11 @@ form {
     padding-left: 30px;
     &[data-language="fi"] {
       background: url("/img/flag_suomi.png") no-repeat;
-      background-size: contain;
+      .background-size(contain);
     }
     &[data-language="sv"] {
       background: url("/img/flag_sverige.png") no-repeat;
-      background-size: contain;
+      .background-size(contain);
     }
     &:hover {
       cursor: pointer;
