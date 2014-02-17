@@ -54,5 +54,7 @@
 		"placeholder": "salasana"
 	},
 	"language": "Kieli",
-	"show_on_map": "Näytä kartalla"
+	"show_on_map": "Näytä kartalla",
+	"gcf": "Selaimesi on liian vanha toimiakseen näillä sivuilla. Päivitä Internet Explorer 9 tai uudempaan, tai asenna yksi ",
+	"gcf_link_text": "näistä selaimista."
 }

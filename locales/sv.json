@@ -54,5 +54,7 @@
 		"placeholder": "lösenord"
 	},
 	"language": "Språk",
-	"show_on_map": "Visa på kartan"
+	"show_on_map": "Visa på kartan",
+	"gcf": "Din webbläsare är för gammal för att fungera på den här sajten. Updatera till Internet Explorer 9 eller nyare, eller installera en av ",
+	"gcf_link_text": "dessa webbläsare."
 }
