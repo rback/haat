@@ -14,7 +14,7 @@ var paths = {
 }
 
 gulp.task('bower', function() {
-  bower()
+  return bower()
   .pipe(gulp.dest('./dist/js/components'))
 });
 
