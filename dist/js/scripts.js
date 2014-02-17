@@ -1,3 +1,4 @@
+!function(e,n,a,t,o,r,c){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,r=n.createElement(a),c=n.getElementsByTagName(a)[0],r.async=1,r.src=t,c.parentNode.insertBefore(r,c)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-48158060-1","heidi-ja-rasm.us"),ga("send","pageview"),window.onerror=function(e,n,a){_gaq.push(["_trackEvent","JS Error",n+":"+a+"\n\n"+e])};
 
 $(function(){var n=$(".language"),a=n.find(".dropdown");n.click(function(){a.toggleClass("expanded")}),a.click(function(n){window.location="locale/"+$(n.target).data("language")})});
 $(function(){$(".loginbutton").click(function(){$("form").submit()})});
