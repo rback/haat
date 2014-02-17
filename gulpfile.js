@@ -26,7 +26,7 @@ gulp.task('copy', function () {
 gulp.task('less', ['bower'], function () {
   return gulp.src( path.join(__dirname, 'public/less/styles.less') )
     .pipe(less({
-      paths: [ path.join(__dirname, 'public') ]
+      paths: [ path.join(__dirname, './dist') ]
     }))
     .pipe(minifyCSS())
     .pipe(gulp.dest('./dist/css'));
