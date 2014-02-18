@@ -5,3 +5,10 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 ga('create', 'UA-48158060-1', 'heidi-ja-rasm.us');
 ga('send', 'pageview');
+
+window.onerror = function(message, url) {
+  var message = 'Error: ' + message
+    + '. URL: ' + url
+    + '. User-agent: ' + navigator.userAgent
+  ga('send', 'event', 'Exceptions', 'JS errors',  message);
+};

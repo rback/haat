@@ -1,4 +1,4 @@
-!function(e,a,n,t,s,c,i){e.GoogleAnalyticsObject=s,e[s]=e[s]||function(){(e[s].q=e[s].q||[]).push(arguments)},e[s].l=1*new Date,c=a.createElement(n),i=a.getElementsByTagName(n)[0],c.async=1,c.src=t,i.parentNode.insertBefore(c,i)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-48158060-1","heidi-ja-rasm.us"),ga("send","pageview");
+!function(e,n,a,t,r,o,s){e.GoogleAnalyticsObject=r,e[r]=e[r]||function(){(e[r].q=e[r].q||[]).push(arguments)},e[r].l=1*new Date,o=n.createElement(a),s=n.getElementsByTagName(a)[0],o.async=1,o.src=t,s.parentNode.insertBefore(o,s)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-48158060-1","heidi-ja-rasm.us"),ga("send","pageview"),window.onerror=function(e,n){var e="Error: "+e+". URL: "+n+". User-agent: "+navigator.userAgent;ga("send","event","Exceptions","JS errors",e)};
 
 $(function(){var n=$(".language"),a=n.find(".dropdown");n.click(function(){a.toggleClass("expanded")}),a.click(function(n){window.location="locale/"+$(n.target).data("language")})});
 $(function(){$(".loginbutton").click(function(){$("form").submit()})});
