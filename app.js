@@ -40,7 +40,7 @@ i18n.init({
     supportedLngs: ["fi", "sv"],
     preload: ["fi", "sv"],
     cookieName: "locale",
-    fallbackLng: false,
+    fallbackLng: "fi",
     resGetPath: __dirname + "/locales/__lng__.json",
     detectLngFromPath: 0,
     debug: false
