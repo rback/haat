@@ -23,7 +23,11 @@ passport.deserializeUser(function(id, done) { done(null, user) })
 
 function ensureAuthenticated(req, res, next) {
   if (process.env.NODE_ENV != "production" || req.isAuthenticated()) { return next() }
-  res.redirect('/login')
+  var language = "fi"
+  if (req.header("host") && req.header("host").indexOf("heidi-och-rasm.us") != -1) {
+    language = "sv"
+  }
+  res.redirect("/" + language + '/login')
 }
 
 app.set("views", __dirname + "/views")
@@ -34,9 +38,11 @@ i18n.init({
     useCookie: true,
     detectLngFromHeaders: false,
     supportedLngs: ["fi", "sv"],
+    preload: ["fi", "sv"],
     cookieName: "locale",
-    fallbackLng: "fi",
+    fallbackLng: false,
     resGetPath: __dirname + "/locales/__lng__.json",
+    detectLngFromPath: 0,
     debug: false
 })
 app.use(express.cookieParser('S3CRE7'))
@@ -45,8 +51,8 @@ app.use(express.urlencoded())
 app.use(express.json())
 app.use(passport.initialize())
 app.use(passport.session())
-app.use(i18n.handle)
 app.use(express.static(__dirname + staticDir))
+app.use(i18n.handle)
 app.use(logfmt.requestLogger(function(req, res) {
     var format = logfmt.requestLogger.commonFormatter(req, res)
     format["user-agent"] = req.headers['user-agent']
@@ -59,11 +65,11 @@ app.get("/", ensureAuthenticated, function (req, res) {
 	res.render("index", { pretty: true })
 })
 
-app.get("/login", function(req, res) {
+app.get("/:locale/login", function(req, res) {
 	res.render("login", { pretty: true })
 })
 
-app.post("/login", passport.authenticate("local", { failureRedirect: "/login", successRedirect: "/" }))
+app.post("/login", passport.authenticate("local", { failureRedirect: "/", successRedirect: "/" }))
 
 app.get("/logout", function(req, res) {
   req.logout()
