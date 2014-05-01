@@ -280,6 +280,88 @@ form {
   }
 }
 
+#seating {
+  width: 1000px;
+  margin: auto;
+  position: relative;
+  img.floorplan { opacity: 0.3; }
+  .guest-table {
+    position: absolute;
+    .top {
+      margin-bottom: 29px;
+      .guest-seat {
+        padding-left: 60px;
+      }
+    }
+    .sides {
+      .guest-seat {
+        padding-bottom: 34px;
+      }
+      .left {
+        .guest-seat { text-align: right; }
+        :last-child { padding-bottom: 0px; }
+        float: left;
+      }
+      .right {
+        margin-left: 77px;
+        .guest-seat { text-align: left; }
+        :last-child { padding-bottom: 0px; }
+        float: right;
+      }
+    }
+    .bottom {
+      margin-top: 29px;
+      .guest-seat {
+        &:first-child { padding-left: 61px; }
+      }
+    }
+    &.one {
+      bottom: 107px;
+      left: 367px;
+      .sides {
+        .guest-seat {
+          padding-bottom: 52px;
+          &:last-child { padding-bottom: 0px; }
+        }
+        .right {
+          margin-left: 163px;
+          &:last-child { padding-bottom: 0px; }
+        }
+      }
+      .bottom {
+        margin-top: 39px;
+        .guest-seat {
+          &:last-child { padding-left: 28px; }
+        }
+      }
+    }
+    &.two {
+      bottom: 145px;
+      left: 114px;
+    }
+    &.three {
+      bottom: 154px;
+      left: 653px;
+    }
+    &.four {
+      bottom: 567px;
+      left: 112px;
+    }
+    &.five {
+      bottom: 574px;
+      left: 308px;
+    }
+    &.six {
+      bottom: 560px;
+      left: 467px;
+    }
+    &.seven {
+      bottom: 574px;
+      left: 653px;
+    }
+  }
+}
+
 .browsehappy {
   margin-top: 40px;
   text-align: center;
