@@ -362,6 +362,65 @@ form {
   }
 }
 
+#seating2 {
+  width: 1000px;
+  margin: auto;
+  position: relative;
+  img.floorplan { opacity: 0.2; }
+  .guest-table {
+    .sans-serif-font();
+    line-height: 23px;
+    position: absolute;
+    .sides {
+      > div { display: inline-block; }
+    }
+    .sides > .left {
+      div {
+        text-align: right;
+        padding-top: 19px;
+      }
+    }
+    .sides > .right {
+      margin-left: 58px;
+      div {
+        padding-top: 19px;
+      }
+    }
+    &.one {
+      bottom: 102px;
+      left: 407px;
+      .bottom {
+        div {
+          transform:rotate(270deg);
+          -webkit-transform: rotate(270deg);
+          -ms-transform:rotate(270deg);
+          transform-origin: left bottom;
+          -webkit-transform-origin: left bottom;
+          -ms-transform-origin: left bottom;
+          width: 38px;
+          display: inline-block;
+        }
+      }
+    }
+    &.two {
+      bottom: 128px;
+      left: 619px;
+    }
+    &.three {
+      bottom: 234px;
+      left: 472px;
+    }
+    &.four {
+      bottom: 219px;
+      left: 336px;
+    }
+    &.five {
+      bottom: 123px;
+      left: 193px;
+    }
+  }
+}
+
 .browsehappy {
   margin-top: 40px;
   text-align: center;
