@@ -289,6 +289,9 @@ form {
     .sans-serif-font();
     line-height: 23px;
     position: absolute;
+    .top {
+      font-size: 24px;
+    }
     .sides {
       > div { display: inline-block; }
     }
@@ -307,6 +310,11 @@ form {
     &.one {
       bottom: 102px;
       left: 407px;
+      .top {
+        position: absolute;
+        bottom: 74px;
+        left: 35%;
+      }
       .bottom {
         div {
           transform:rotate(270deg);
@@ -321,18 +329,38 @@ form {
       }
     }
     &.two {
+      .top {
+        position: absolute;
+        top: 50px;
+        left: 53%;
+      }
       bottom: 218px;
       left: 623px;
     }
     &.three {
+      .top {
+        position: absolute;
+        top: 62px;
+        left: 47%;
+      }
       bottom: 233px;
       left: 473px;
     }
     &.four {
+      .top {
+        position: absolute;
+        top: 50px;
+        left: 42%;
+      }
       bottom: 219px;
       left: 336px;
     }
     &.five {
+      .top {
+        position: absolute;
+        top: 50px;
+        left: 50%;
+      }
       bottom: 123px;
       left: 193px;
     }
