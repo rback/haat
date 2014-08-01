@@ -85,6 +85,12 @@ app.get("/seating", function(req,res) {
   res.render("seating", { pretty: true })
 })
 
+app.get("/foton", photosRedirect)
+app.get("/kuvat", photosRedirect)
+function photosRedirect(req,res) {
+  res.redirect("https://www.flickr.com/gp/53542562@N06/4913J7")
+}
+
 var port = process.env.PORT || 5000
 app.listen(port, function() {
   console.log("Listening on " + port)
